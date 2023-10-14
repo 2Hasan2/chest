@@ -1,0 +1,75 @@
+body {
+  background-image: url('https://img.freepik.com/premium-photo/doctor39s-hand-glove-holds-stethoscope-with-anatomical-shape-healthy-human-lungs-medical-icons-symbolizing-diagnosis-treatment-care-protection-medical-poster-high-quality-photo_297535-3672.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(1px) saturate(80%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+}
+
+h4 {
+  text-align: center;
+  color: black;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+p {
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.inputfile {
+  
+ position: absolute;
+  opacity: 0;
+  overflow: hidden;
+ 
+}
+
+.inputfile + label {
+  cursor: pointer;
+font-size: 1.25em;
+  font-weight: 500;
+  color: white;
+  background-color: black;
+  display: inline-block;
+  padding: 5px 5px;
+  text-align: center;
+  border-width: 5px;
+  overflow: hidden;
+  
+}
+
+
+.submitbutton{
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: white;
+  background-color: black;
+  display: inline-block;
+  padding: 5px 5px;
+  text-align: center;
+  overflow: hidden;
+  border-width: 5px;
+}
