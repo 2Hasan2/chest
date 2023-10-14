@@ -3,20 +3,25 @@
 
   let messages;
 
-  onMount(async () => {
-    const file = document.getElementById("file");
-    const formData = new FormData();
-    formData.append("file", file.files[0]);
+  let send=(e)=>{
+     e.preventDefault();
 
-    const response = await fetch("/", {
-      method: "POST",
-      enctype: "multipart/form-data",
-      body: formData,
-    });
+        const formData = new FormData();
+        formData.append('file', file.files[0]);
 
-    const json = await response.json();
-    messages = json;
-  });
+        fetch('http://127.0.0.1:1010/upload', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.warn(error)
+            });
+  }
+
 </script>
 
 <h2 class="text-cenetr">CT Scan Lung Disease Prediction</h2>
@@ -32,7 +37,7 @@
     <label for="file">Choose a file</label>
   </p>
   <p>
-    <input class="submitbutton" type="submit" name="submit" value="Submit" />
+    <input on:click={send} class="submitbutton" type="submit" name="submit" value="Submit" />
   </p>
 </form>
 
